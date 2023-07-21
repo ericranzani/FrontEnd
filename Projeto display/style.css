@@ -1,0 +1,40 @@
+body {
+  font-family: arial;
+  /*solução do profressor*/
+  margin: 50px;
+}
+
+h1 {
+  text-align: center;
+  /*solução do profressor*/
+  margin: 0px;
+}
+
+h2 {
+  color: #fff;
+}
+
+strong {
+  color: #febe01;
+}
+
+.item {
+  border: 1px solid;
+  border-radius: 4px;
+  margin: 30px;
+  padding: 30px;
+  background-color: #000;
+}
+
+a {
+  background: #febe01;
+  color: #332200;
+  border: 0.5px;
+  border-radius: 4px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+p {
+  color: #b2b2b2;
+}
