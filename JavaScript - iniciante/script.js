@@ -76,6 +76,7 @@ function mostrar() {
 botao.addEventListener("click", mostrar);
 
 //Window
+/*
 const alturaTela = window.innerHeight;
 const larguraTela = window.innerWidth;
 
@@ -96,4 +97,50 @@ function scroll() {
   console.log(window.scrollY);
 }
 
-window.addEventListener("scroll", scroll);
+window.addEventListener("scroll", scroll); */
+
+//condicionais
+if (false) {
+  console.log("Não executado");
+} else {
+  console.log("Código executado");
+}
+
+const elemento = document.querySelector("body");
+const elementoNaoExiste = document.querySelector("article");
+console.log(Boolean(elemento));
+console.log(Boolean(elementoNaoExiste));
+
+const texto1 = "JavaScript";
+const textoVazio = "";
+console.log(Boolean(texto));
+console.log(Boolean(textoVazio));
+
+const numero = 20;
+const numeroZero = 0;
+console.log(Boolean(numero));
+console.log(Boolean(numeroZero));
+
+console.log(Boolean(undefined));
+console.log(Boolean(null));
+
+// Todas precisam ser verdadeiras
+if (true && false) {
+  console.log("Não executa");
+}
+
+// Pelo menos uma precisa ser verdadeira
+if (true || false) {
+  console.log("Executa");
+}
+
+"JavaScript" === "javascript"; // false
+"20" === 20; // false
+30 !== 20; // true
+document.querySelector(".texto") !== null; // false
+
+// Comparar números
+10 > 5; // true
+20 < 10; // false
+10 >= 10; // true
+20 <= 30; // true
