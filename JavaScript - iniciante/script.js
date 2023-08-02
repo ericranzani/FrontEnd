@@ -41,3 +41,59 @@ function logCurso(nome) {
 
 const valor = logCurso("JavaScript");
 console.log(valor);
+
+//metodo
+const curso = {
+  nome: "JavaScript",
+  completar() {
+    console.log(this.nome + ": Curso Completo.");
+  },
+  horas: "40 horas",
+};
+
+curso.completar();
+
+//Eventos e evento
+const ativar = document.querySelector(".ativar");
+
+/** @param {MouseEvent} event */
+function handleClick(event) {
+  console.log(event);
+}
+
+ativar.addEventListener("click", handleClick);
+
+console.log(ativar);
+
+//Interação
+const botao = document.querySelector(".botao");
+
+function mostrar() {
+  const texto = document.querySelector(".texto");
+  texto.classList.toggle("ativo");
+}
+
+botao.addEventListener("click", mostrar);
+
+//Window
+const alturaTela = window.innerHeight;
+const larguraTela = window.innerWidth;
+
+console.log(alturaTela);
+console.log(larguraTela);
+
+function coordenadaMouse(event) {
+  const coordenadas = {
+    x: event.x,
+    y: event.y,
+  };
+  console.log(coordenadas);
+}
+
+window.addEventListener("mousemove", coordenadaMouse);
+
+function scroll() {
+  console.log(window.scrollY);
+}
+
+window.addEventListener("scroll", scroll);
