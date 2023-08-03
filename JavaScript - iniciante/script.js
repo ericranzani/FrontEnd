@@ -144,3 +144,66 @@ document.querySelector(".texto") !== null; // false
 20 < 10; // false
 10 >= 10; // true
 20 <= 30; // true
+
+//array
+const lista = ["JavaScript", "HTML", "CSS"];
+const body = document.querySelector("body");
+
+console.log(lista);
+
+//pegado elemento da lista e aplicando numa variável
+const js = lista[0];
+const html = lista[1];
+const css = lista[2];
+
+//loop que adiciona no html cada elemento da lista
+for (let index = 0; index < lista.length; index++) {
+  const item = lista[index];
+  body.innerHTML += "<li>" + lista[index] + "</li>";
+}
+
+//forEach
+function logarItems(item, index) {
+  console.log(item, "no index:", index);
+}
+
+lista.forEach(logarItems);
+
+// você pode escrever a função no argumento:
+lista.forEach(function (item, index) {
+  console.log(item, "no index:", index);
+});
+
+//utilizando o querySelectorAll
+//const links = Array.from(document.querySelectorAll('a'));
+//Array vs Array-like
+const links = Array.from(document.querySelectorAll("a"));
+
+function logHref(item) {
+  const href = item.href;
+  console.log(href);
+}
+
+links.forEach(logHref);
+
+// Primeiro link
+console.log(links[0]);
+
+//metodos e propriedades bem comuns
+// retorna o total
+const total = lista.length;
+
+// remove o último
+const ultimo = lista.pop();
+
+// remove o primeiros
+const primeiro = lista.shift();
+
+// adiciona ao final
+lista.push("PHP");
+
+console.log(lista);
+
+// erro se não usar o Array.from
+links.pop();
+console.log(links);
